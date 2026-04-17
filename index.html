@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="الخطة الإعلامية لكلية المأمون الجامعة - فريق النشر والحسابات الرسمية">
+    <title>الخطة الإعلامية | كلية المأمون الجامعة</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==========================================
+           1. المتغيرات والألوان الرسمية للمأمون
+           ========================================== */
+        :root {
+            --primary-blue: #1B264F;     
+            --primary-gold: #EFDC14;     
+            --bg-page: #f4f7f6;          
+            --bg-card: #ffffff;          
+            --text-dark: #1a1a2e;
+            --text-muted: #6c757d;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ==========================================
+           2. الهيدر (رأس الصفحة) والشعار والأزرار
+           ========================================== */
+        .hero-header {
+            background: var(--primary-blue);
+            color: #ffffff;
+            padding: 4.5rem 0;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid var(--primary-gold);
+            box-shadow: 0 10px 30px rgba(27, 38, 79, 0.1);
+        }
+
+        .hero-header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(rgba(255,255,255,0.05) 2px, transparent 2px);
+            background-size: 30px 30px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .college-logo {
+            width: 125px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+            transition: transform 0.4s ease;
+        }
+
+        .college-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-header h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 0.8rem;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-header p {
+            font-size: 1.2rem;
+            color: #e0e6ed;
+            font-weight: 500;
+            max-width: 650px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-actions {
+            position: relative;
+            z-index: 2;
+            margin-top: 2.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .btn-gold {
+            background: var(--primary-gold);
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-gold);
+            box-shadow: 0 4px 15px rgba(239, 220, 20, 0.3);
+        }
+
+        .btn-gold:hover {
+            background: #d4c313;
+            border-color: #d4c313;
+            transform: translateY(-3px);
+            color: var(--primary-blue);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #ffffff;
+            transform: translateY(-3px);
+            color: #ffffff;
+        }
+
+        /* ==========================================
+           3. أقسام الموقع
+           ========================================== */
+        .plan-section {
+            padding: 4rem 0;
+            scroll-margin-top: 20px; 
+        }
+
+        .bg-light-alt {
+            background-color: #eef2f5;
+            border-top: 1px solid #e0e6ed;
+            border-bottom: 1px solid #e0e6ed;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-gold);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* تنسيق خاص لشبكة الإدارة لتوسيط البطاقات */
+        .grid-admin {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .grid-admin .card {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        /* ==========================================
+           4. تصميم البطاقات
+           ========================================== */
+        .card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(27, 38, 79, 0.05);
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .card.show {
+            animation: fadeUpIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            animation-delay: calc(var(--delay) * 0.1s);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary-gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(27, 38, 79, 0.1);
+            border-color: rgba(27, 38, 79, 0.1);
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            background: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--primary-gold);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover .avatar {
+            transform: scale(1.08) rotate(5deg);
+        }
+
+        .name {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        /* تنسيق المنصب الوظيفي للإدارة */
+        .role-badge {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: var(--primary-gold);
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .btn-social {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: 1.5px solid #d1d5db;
+            color: var(--text-muted);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            transition: var(--transition);
+        }
+
+        .btn-social:hover {
+            background: var(--primary-blue);
+            color: #ffffff;
+            border-color: var(--primary-blue);
+            box-shadow: 0 5px 15px rgba(27, 38, 79, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================
+           5. قسم المصمم
+           ========================================== */
+        .developer-section {
+            padding: 5rem 0;
+            text-align: center;
+            background-color: #ffffff;
+            border-top: 1px solid rgba(27, 38, 79, 0.05);
+            scroll-margin-top: 20px;
+        }
+
+        .developer-badge {
+            display: inline-block;
+            background: var(--bg-page);
+            padding: 1.5rem 3rem;
+            border-radius: 16px;
+            border: 1px solid rgba(27, 38, 79, 0.08);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .developer-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(27, 38, 79, 0.1);
+            border-color: var(--primary-gold);
+        }
+
+        .developer-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-blue);
+        }
+
+        .dev-title {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+        }
+
+        .dev-name {
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .dev-social {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #d62976; 
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            background: rgba(214, 41, 118, 0.08);
+            transition: var(--transition);
+        }
+
+        .dev-social:hover {
+            background: #d62976;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(214, 41, 118, 0.3);
+        }
+
+        /* ==========================================
+           6. الفوتر (تذييل الصفحة)
+           ========================================== */
+        footer {
+            background: var(--primary-blue);
+            color: #ffffff;
+            text-align: center;
+            padding: 2.5rem 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        footer .gold-text {
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+
+        @keyframes fadeUpIn {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-header { padding: 3rem 0 3.5rem; }
+            .hero-header h1 { font-size: 2.2rem; }
+            .header-actions { flex-direction: column; align-items: center; gap: 10px; }
+            .btn-header { width: 100%; max-width: 320px; justify-content: center; }
+            .section-title { font-size: 1.7rem; }
+            .grid { gap: 1.5rem; }
+            .developer-badge { padding: 1.2rem 1.5rem; width: 100%; max-width: 320px;}
+            .dev-name { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-header">
+        <div class="container">
+            <img src="https://almamonuc.edu.iq/uploads/logo.png" alt="شعار كلية المأمون الجامعة" class="college-logo">
+            <h1>الخطة الإعلامية لكلية المأمون</h1>
+            <p>المنصة الرسمية لمتابعة وتنسيق الحسابات الخاصة بنشر إنجازات وفعاليات الكلية</p>
+            
+            <div class="header-actions">
+                <a href="#adminSection" class="btn-header btn-gold">
+                    <i class="fa-solid fa-user-tie"></i> الإدارة والإشراف
+                </a>
+                <a href="#topSection" class="btn-header btn-outline">
+                    <i class="fa-solid fa-medal"></i> أفضل الداعمين
+                </a>
+                <a href="#instaSection" class="btn-header btn-outline">
+                    <i class="fa-brands fa-instagram"></i> حسابات الانستكرام
+                </a>
+                <a href="#tiktokSection" class="btn-header btn-outline">
+                    <i class="fa-brands fa-tiktok"></i> حسابات التيك توك
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="plan-section" id="adminSection">
+            <div class="container">
+                <h2 class="section-title"><i class="fa-solid fa-user-tie" style="color:var(--primary-gold)"></i> الإدارة والإشراف</h2>
+                <div class="grid-admin" id="adminGrid"></div>
+            </div>
+        </section>
+
+        <section class="plan-section bg-light-alt" id="topSection">
+            <div class="container">
+                <h2 class="section-title"><i class="fa-solid fa-medal" style="color:var(--primary-gold)"></i> أفضل الداعمين</h2>
+                <div class="grid" id="topGrid"></div>
+            </div>
+        </section>
+
+        <section class="plan-section" id="instaSection">
+            <div class="container">
+                <h2 class="section-title"><i class="fa-brands fa-instagram" style="color:#d62976"></i> فريق الانستكرام</h2>
+                <div class="grid" id="instaGrid"></div>
+            </div>
+        </section>
+
+        <section class="plan-section bg-light-alt" id="tiktokSection">
+            <div class="container">
+                <h2 class="section-title"><i class="fa-brands fa-tiktok" style="color:#000000"></i> فريق التيك توك</h2>
+                <div class="grid" id="tiktokGrid"></div>
+            </div>
+        </section>
+
+        <section class="developer-section" id="developerSection">
+            <div class="container">
+                <div class="developer-badge">
+                    <p class="dev-title">تصميم وتطوير</p>
+                    <h3 class="dev-name">رحومي البراهيم | Rahomi Al-Brahim ✪</h3>
+                    <a href="https://instagram.com/1.ee3" target="_blank" rel="noopener noreferrer" class="dev-social">
+                        <i class="fa-brands fa-instagram"></i> @1.ee3
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 <span class="gold-text">كلية المأمون الجامعة</span> · جميع الحقوق محفوظة</p>
+            <p style="margin-top: 8px; font-size: 0.85rem; opacity: 0.6;">الخطة الإعلامية - فريق النشر الرقمي</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            "use strict";
+
+            // 1. الإدارة والإشراف (تمت إضافة روابط الانستكرام)
+            const fallbackAdmin = [
+                { name: "د. سامر عادل", role: "مدير التسجيل والشؤون الطلابية", avatarLetter: "س", link: "https://instagram.com/11.06.202020", platform: "@11.06.202020", iconClass: "fa-brands fa-instagram" },
+                { name: "أ. محمد صاحب", role: "مسؤول قسم الإعلام", avatarLetter: "م", link: "https://instagram.com/m100ohu", platform: "@m100ohu", iconClass: "fa-brands fa-instagram" }
+            ];
+
+            // 2. أفضل الداعمين
+            const fallbackTop = [
+                { name: "كلية المأمون الجامعة", avatarLetter: "م", link: "https://instagram.com/almamounuc", platform: "@almamounuc", iconClass: "fa-brands fa-instagram" },
+                { name: "بيج شباك المأمون", avatarLetter: "ش", link: "#", platform: "شباك المأمون", iconClass: "fa-brands fa-tiktok" }
+            ];
+
+            // 3. قسم فريق الانستكرام
+            const fallbackInsta = [
+                { name: "روضي الجوهرة", avatarLetter: "ر", link: "https://instagram.com/838xg", platform: "@838xg", iconClass: "fa-brands fa-instagram" },
+                { name: "بان الدباغ", avatarLetter: "ب", link: "https://instagram.com/ban_dabgh1", platform: "@ban_dabgh1", iconClass: "fa-brands fa-instagram" },
+                { name: "Hexeebug", avatarLetter: "H", link: "https://instagram.com/hexeebug", platform: "@hexeebug", iconClass: "fa-brands fa-instagram" },
+                { name: "Ali", avatarLetter: "A", link: "https://instagram.com/ali", platform: "@ali", iconClass: "fa-brands fa-instagram" },
+                { name: "بيج شباك المأمون", avatarLetter: "ش", link: "#", platform: "شباك المأمون", iconClass: "fa-brands fa-instagram" },
+                { name: "كلية المأمون الجامعة", avatarLetter: "م", link: "https://instagram.com/almamounuc", platform: "@almamounuc", iconClass: "fa-brands fa-instagram" },
+                { name: "رحومي البراهيم", avatarLetter: "ر", link: "https://instagram.com/1.ee3", platform: "@1.ee3", iconClass: "fa-brands fa-instagram" }
+            ];
+            
+            // 4. قسم فريق التيك توك 
+            const fallbackTiktok = [
+                { name: "روضي الجوهرة", avatarLetter: "ر", link: "https://tiktok.com/@838xg", platform: "@838xg", iconClass: "fa-brands fa-tiktok" },
+                { name: "بان الدباغ", avatarLetter: "ب", link: "https://tiktok.com/@ban_dabgh1", platform: "@ban_dabgh1", iconClass: "fa-brands fa-tiktok" },
+                { name: "Hexeebug", avatarLetter: "H", link: "https://tiktok.com/@hexeebug", platform: "@hexeebug", iconClass: "fa-brands fa-tiktok" },
+                { name: "Ali", avatarLetter: "A", link: "https://tiktok.com/@ali", platform: "@ali", iconClass: "fa-brands fa-tiktok" },
+                { name: "بيج شباك المأمون", avatarLetter: "ش", link: "#", platform: "شباك المأمون", iconClass: "fa-brands fa-tiktok" },
+                { name: "كلية المأمون الجامعة", avatarLetter: "م", link: "https://tiktok.com/@almamounuc", platform: "@almamounuc", iconClass: "fa-brands fa-tiktok" },
+                { name: "رحومي البراهيم", avatarLetter: "ر", link: "https://tiktok.com/@1.ee3", platform: "@1.ee3", iconClass: "fa-brands fa-tiktok" }
+            ];
+
+            // دالة رسم البطاقات
+            function renderGrid(dataArray, containerId) {
+                const gridContainer = document.getElementById(containerId);
+                if(!gridContainer) return;
+
+                gridContainer.innerHTML = ''; 
+                const fragment = document.createDocumentFragment();
+                
+                dataArray.forEach((supp, index) => {
+                    const card = document.createElement('article');
+                    card.className = 'card';
+                    card.style.setProperty('--delay', index % 4); 
+                    
+                    // التحقق مما إذا كان هناك منصب وظيفي (للإدارة)
+                    const roleHTML = supp.role ? `<div class="role-badge">${supp.role}</div>` : '';
+
+                    card.innerHTML = `
+                        <div class="avatar">${supp.avatarLetter}</div>
+                        <h3 class="name">${supp.name}</h3>
+                        ${roleHTML}
+                        <a href="${supp.link}" class="btn-social" target="_blank" rel="noopener noreferrer">
+                            <i class="${supp.iconClass}"></i> ${supp.platform}
+                        </a>
+                    `;
+                    fragment.appendChild(card);
+                });
+                
+                gridContainer.appendChild(fragment);
+            }
+
+            // تفعيل التحريكات عند التمرير
+            function observeCards() {
+                const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+                            observer.unobserve(entry.target); 
+                        }
+                    });
+                }, observerOptions);
+
+                document.querySelectorAll('.card, .developer-badge').forEach(el => {
+                    observer.observe(el);
+                });
+            }
+
+            // جلب البيانات 
+            function initData() {
+                renderGrid(fallbackAdmin, 'adminGrid');
+                renderGrid(fallbackTop, 'topGrid');
+                renderGrid(fallbackInsta, 'instaGrid');
+                renderGrid(fallbackTiktok, 'tiktokGrid');
+                observeCards();
+            }
+
+            initData();
+
+            // منع السلوك الافتراضي للروابط الفارغة
+            document.body.addEventListener('click', (e) => {
+                const btn = e.target.closest('.btn-social');
+                if (btn && btn.getAttribute('href') === '#') {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
