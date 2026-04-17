@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <meta name="description" content="الخطة الإعلامية لكلية المأمون الجامعة - فريق النشر والحسابات الرسمية">
-    <title>الخطة الإعلامية | كلية المأمون الجامعة</title>
+    <meta name="description" content="الخطة الإعلامية لجامعة المأمون - فريق النشر والحسابات الرسمية">
+    <title>الخطة الإعلامية | جامعة المأمون</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 
     <style>
         /* ==========================================
-           1. المتغيرات والألوان الرسمية للمأمون
+           1. المتغيرات والألوان الرسمية للجامعة
            ========================================== */
         :root {
             --primary-blue: #1B264F;     
@@ -315,7 +315,7 @@
         }
 
         /* ==========================================
-           5. قسم المصمم
+           5. قسم المصمم والاقتباس
            ========================================== */
         .developer-section {
             padding: 5rem 0;
@@ -323,6 +323,29 @@
             background-color: #ffffff;
             border-top: 1px solid rgba(27, 38, 79, 0.05);
             scroll-margin-top: 20px;
+        }
+
+        .quote-container {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+
+        .quote-icon {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            opacity: 0.4;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .site-quote {
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            font-weight: 500;
+            line-height: 1.8;
+            font-style: italic;
+            padding: 0 2rem;
         }
 
         .developer-badge {
@@ -420,6 +443,7 @@
             .btn-header { width: 100%; max-width: 320px; justify-content: center; }
             .section-title { font-size: 1.7rem; }
             .grid { gap: 1.5rem; }
+            .site-quote { font-size: 1.1rem; padding: 0 1rem;}
             .developer-badge { padding: 1.2rem 1.5rem; width: 100%; max-width: 320px;}
             .dev-name { font-size: 1.1rem; }
         }
@@ -429,9 +453,9 @@
 
     <header class="hero-header">
         <div class="container">
-            <img src="https://almamonuc.edu.iq/uploads/logo.png" alt="شعار كلية المأمون الجامعة" class="college-logo">
-            <h1>الخطة الإعلامية لكلية المأمون</h1>
-            <p>المنصة الرسمية لمتابعة وتنسيق الحسابات الخاصة بنشر إنجازات وفعاليات الكلية</p>
+            <img src="https://almamonuc.edu.iq/uploads/logo.png" alt="شعار جامعة المأمون" class="college-logo">
+            <h1>الخطة الإعلامية لجامعة المأمون</h1>
+            <p>المنصة الرسمية لمتابعة وتنسيق الحسابات الخاصة بنشر إنجازات وفعاليات الجامعة</p>
             
             <div class="header-actions">
                 <a href="#adminSection" class="btn-header btn-gold">
@@ -481,6 +505,14 @@
 
         <section class="developer-section" id="developerSection">
             <div class="container">
+                
+                <div class="quote-container">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <blockquote class="site-quote">
+                        "الإبداع في التصميم ليس مجرد واجهة جمالية، بل هو ترجمة لرؤية الجامعة وطموح داعميها. تم بناء هذا الصرح الرقمي ليكون واجهة تليق بكرم شركاء النجاح وتخلد عطاءهم في مسيرة البناء العلمي لجامعتنا."
+                    </blockquote>
+                </div>
+
                 <div class="developer-badge">
                     <p class="dev-title">تصميم وتطوير</p>
                     <h3 class="dev-name">رحومي البراهيم | Rahomi Al-Brahim ✪</h3>
@@ -488,13 +520,14 @@
                         <i class="fa-brands fa-instagram"></i> @1.ee3
                     </a>
                 </div>
+
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>© 2025 <span class="gold-text">كلية المأمون الجامعة</span> · جميع الحقوق محفوظة</p>
+            <p>© 2025 <span class="gold-text">جامعة المأمون</span> · جميع الحقوق محفوظة</p>
             <p style="margin-top: 8px; font-size: 0.85rem; opacity: 0.6;">الخطة الإعلامية - فريق النشر الرقمي</p>
         </div>
     </footer>
@@ -503,7 +536,9 @@
         document.addEventListener("DOMContentLoaded", () => {
             "use strict";
 
-            // 1. الإدارة والإشراف (تمت إضافة روابط الانستكرام)
+            const sheetURL = ""; 
+
+            // 1. الإدارة والإشراف
             const fallbackAdmin = [
                 { name: "د. سامر عادل", role: "مدير التسجيل والشؤون الطلابية", avatarLetter: "س", link: "https://instagram.com/11.06.202020", platform: "@11.06.202020", iconClass: "fa-brands fa-instagram" },
                 { name: "أ. محمد صاحب", role: "مسؤول قسم الإعلام", avatarLetter: "م", link: "https://instagram.com/m100ohu", platform: "@m100ohu", iconClass: "fa-brands fa-instagram" }
@@ -511,7 +546,7 @@
 
             // 2. أفضل الداعمين
             const fallbackTop = [
-                { name: "كلية المأمون الجامعة", avatarLetter: "م", link: "https://instagram.com/almamounuc", platform: "@almamounuc", iconClass: "fa-brands fa-instagram" },
+                { name: "جامعة المأمون", avatarLetter: "ج", link: "https://instagram.com/almamounuc", platform: "@almamounuc", iconClass: "fa-brands fa-instagram" },
                 { name: "بيج شباك المأمون", avatarLetter: "ش", link: "#", platform: "شباك المأمون", iconClass: "fa-brands fa-tiktok" }
             ];
 
@@ -522,7 +557,7 @@
                 { name: "Hexeebug", avatarLetter: "H", link: "https://instagram.com/hexeebug", platform: "@hexeebug", iconClass: "fa-brands fa-instagram" },
                 { name: "Ali", avatarLetter: "A", link: "https://instagram.com/ali", platform: "@ali", iconClass: "fa-brands fa-instagram" },
                 { name: "بيج شباك المأمون", avatarLetter: "ش", link: "#", platform: "شباك المأمون", iconClass: "fa-brands fa-instagram" },
-                { name: "كلية المأمون الجامعة", avatarLetter: "م", link: "https://instagram.com/almamounuc", platform: "@almamounuc", iconClass: "fa-brands fa-instagram" },
+                { name: "جامعة المأمون", avatarLetter: "ج", link: "https://instagram.com/almamounuc", platform: "@almamounuc", iconClass: "fa-brands fa-instagram" },
                 { name: "رحومي البراهيم", avatarLetter: "ر", link: "https://instagram.com/1.ee3", platform: "@1.ee3", iconClass: "fa-brands fa-instagram" }
             ];
             
@@ -533,7 +568,7 @@
                 { name: "Hexeebug", avatarLetter: "H", link: "https://tiktok.com/@hexeebug", platform: "@hexeebug", iconClass: "fa-brands fa-tiktok" },
                 { name: "Ali", avatarLetter: "A", link: "https://tiktok.com/@ali", platform: "@ali", iconClass: "fa-brands fa-tiktok" },
                 { name: "بيج شباك المأمون", avatarLetter: "ش", link: "#", platform: "شباك المأمون", iconClass: "fa-brands fa-tiktok" },
-                { name: "كلية المأمون الجامعة", avatarLetter: "م", link: "https://tiktok.com/@almamounuc", platform: "@almamounuc", iconClass: "fa-brands fa-tiktok" },
+                { name: "جامعة المأمون", avatarLetter: "ج", link: "https://tiktok.com/@almamounuc", platform: "@almamounuc", iconClass: "fa-brands fa-tiktok" },
                 { name: "رحومي البراهيم", avatarLetter: "ر", link: "https://tiktok.com/@1.ee3", platform: "@1.ee3", iconClass: "fa-brands fa-tiktok" }
             ];
 
@@ -579,12 +614,12 @@
                     });
                 }, observerOptions);
 
-                document.querySelectorAll('.card, .developer-badge').forEach(el => {
+                document.querySelectorAll('.card, .developer-badge, .quote-container').forEach(el => {
                     observer.observe(el);
                 });
             }
 
-            // جلب البيانات 
+            // جلب البيانات (الاعتماد على الافتراضية حالياً)
             function initData() {
                 renderGrid(fallbackAdmin, 'adminGrid');
                 renderGrid(fallbackTop, 'topGrid');
